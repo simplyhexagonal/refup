@@ -1,0 +1,5 @@
+#! /usr/bin/env node
+
+const fs = require('fs');
+const polyString = "'undefined'!=typeof module&&(module.exports=MODULE_NAME.default),'undefined'!=typeof window&&(MODULE_NAME=MODULE_NAME.default);";
+fs.appendFileSync(process.argv[2], polyString.replace(/MODULE_NAME/g, process.argv[3]));

@@ -1,0 +1,10 @@
+{
+  "name": "refup",
+  "version": "1.0.0",
+  "description": "Reference up your typescript output to get rid of the pesky Uncaught ReferenceError",
+  "main": "bin/refup",
+  "bin": "bin/refup",
+  "repository": "https://github.com/simplyhexagonal/refup",
+  "author": "Jean M. Lescure",
+  "license": "Apache-2.0"
+}
