@@ -6,5 +6,20 @@
   "bin": "bin/refup",
   "repository": "https://github.com/simplyhexagonal/refup",
   "author": "Jean M. Lescure",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "scripts": {
+    "release": "release-it"
+  },
+  "release-it": {
+    "git": {
+      "changelog": "auto-changelog --stdout -l false -u -t ./assets/changelog-compact.hbs"
+    },
+    "npm": {
+      "publish": false
+    }
+  },
+  "devDependencies": {
+    "auto-changelog": "^2.3.0",
+    "release-it": "^14.11.6"
+  }
 }
