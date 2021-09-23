@@ -1,5 +1,9 @@
 #! /usr/bin/env node
 
 const fs = require('fs');
-const polyString = "'undefined'!=typeof module&&(module.exports=MODULE_NAME.default),'undefined'!=typeof window&&(MODULE_NAME=MODULE_NAME.default);";
-fs.appendFileSync(process.argv[2], polyString.replace(/MODULE_NAME/g, process.argv[3]));
+const { argv } = require('process');
+
+const defaultString = (argv[4] === '--no-default') ? '' : '.default';
+
+const polyString = `'undefined'!=typeof module&&(module.exports=MODULE_NAME${defaultString}),'undefined'!=typeof window&&(MODULE_NAME=MODULE_NAME${defaultString});`;
+fs.appendFileSync(argv[2], polyString.replace(/MODULE_NAME/g, argv[3]));

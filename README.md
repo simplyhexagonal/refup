@@ -15,3 +15,19 @@ Please consider:
 - [Buying me a coffee](https://www.buymeacoffee.com/jeanlescure) ☕
 - Supporting me on [Patreon](https://www.patreon.com/jeanlescure) 🏆
 - Starring this repo on [Github](https://github.com/jeanlescure/short-unique-id) 🌟
+
+## Install
+
+```
+npm install -g refup
+```
+
+## Usage
+
+```bash
+# if file has export default
+refup dist/short-unique-id.js ShortUniqueId
+
+# if file has only named exports
+refup dist/multi-replace.js MultiReplace --no-default
+```
