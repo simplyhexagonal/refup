@@ -1,6 +1,6 @@
 {
   "name": "refup",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Reference up your typescript output to get rid of the pesky Uncaught ReferenceError",
   "main": "bin/refup",
   "bin": "bin/refup",
